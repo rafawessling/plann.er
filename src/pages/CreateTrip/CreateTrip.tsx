@@ -65,7 +65,7 @@ export function CreateTrip() {
 
     const createTrip = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        navigate('/trips/');
+        navigate('/trips/123');
     };
 
     return (

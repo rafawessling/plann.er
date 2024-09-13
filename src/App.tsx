@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { CreateTrip } from './pages/CreateTrip/CreateTrip';
-import { TripDetails } from './pages/TripDetails/TripDefails';
+import { TripDetails } from './pages/TripDetails/TripDetails';
 
 const router = createBrowserRouter([
     {
