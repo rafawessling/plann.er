@@ -3,6 +3,7 @@ import { Button } from '../../Button/Button';
 import { useState } from 'react';
 import { DateRange, DayPicker } from 'react-day-picker';
 import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 import 'react-day-picker/style.css';
 
 interface DestinationAndDateStepProps {
@@ -34,9 +35,11 @@ export function DestinationAndDateStep({
 
     const displayedDate =
         eventStartAndEndDates && eventStartAndEndDates.from && eventStartAndEndDates.to
-            ? format(eventStartAndEndDates.from, "d' de 'LLL")
+            ? format(eventStartAndEndDates.from, "d' de 'LLL", { locale: ptBR })
                   .concat(' até ')
-                  .concat(format(eventStartAndEndDates.to, "d' de 'LLL"))
+                  .concat(
+                      format(eventStartAndEndDates.to, "d' de 'LLL", { locale: ptBR })
+                  )
             : null;
 
     return (
